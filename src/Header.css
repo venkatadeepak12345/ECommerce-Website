@@ -1,0 +1,185 @@
+/* Container for the whole header */
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 20px;
+}
+
+/* Logo section (icon + text) */
+.header__logo {
+  display: flex;
+  align-items: center;
+  color: #ff9f00;
+  margin-right: 20px;
+}
+
+.header__logoImage {
+  margin-right: 10px;
+}
+
+.header__logoTitle {
+  text-decoration: none;
+  border: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Search bar */
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 25px;
+  background-color: white;
+  margin: 0 20px;
+  padding: 5px;
+}
+
+.header__searchInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.header__searchLogo {
+  color: #131921;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Navigation section */
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Each nav item */
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.nav__itemLineOne {
+  font-size: 10px;
+}
+
+.nav__itemLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Basket */
+.item__Basket {
+  color: white;
+  margin-right: 5px;
+}
+
+.nav__BasketCount {
+  margin-left: 2px;
+  font-weight: bold;
+}
+/* --- Theme Selector Styling --- */
+.theme-selector {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.theme-selector button {
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 10px;
+  
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.3s;
+}
+
+/* Theme Colors */
+.theme-selector .light {
+  background-color: #f1f1f1;
+}
+
+.theme-selector .medium {
+  background-color: #888888;
+}
+
+.theme-selector .dark {
+  background-color: #1c1c1c;
+}
+
+/* Highlight active theme */
+.theme-selector .activeTheme {
+  border: 2px solid #0073e6;
+  transform: scale(1.1);
+}
+
+/* --- Theme Styles for Body --- */
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.medium {
+  background-color: #d3d3d3;
+  color: #111111;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Optional: Theme for header background */
+body.light .header {
+  background-color: #f8f8f8;
+}
+
+body.medium .header {
+  background-color: #b0b0b0;
+}
+
+body.dark .header {
+  background-color: #1e1e1e;
+}
+
+/* Example: Change input and icons based on theme */
+body.dark .header__searchInput {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+body.light .header__searchInput {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+/* Basket Count Bubble */
+.nav__BasketCount {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+/* You can also add transitions for a smooth theme switch */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
