@@ -10,7 +10,8 @@ import { useStateValue } from './StateProvider';
 const CheckOut = () => {
   const [{ basket }] = useStateValue(); // If you're using context
 
-  // Decide what to render: basket or full product list
+    // Decide what to render: basket or full product list
+  //hello
   const itemsToShow = basket && basket.length > 0 ? basket : productData;
 
   return (
